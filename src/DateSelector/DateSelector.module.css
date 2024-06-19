@@ -1,0 +1,10 @@
+.date_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.2em;
+}
+
+.date_container > * + * {
+    margin-left: 0.5em;
+}

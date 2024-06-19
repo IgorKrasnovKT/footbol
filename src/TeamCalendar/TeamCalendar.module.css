@@ -1,0 +1,126 @@
+@import '../variables.css';
+
+.teams_calendar_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.teams_calendar_container > * + * {
+    margin-top: 1em;
+}
+
+.team_info {
+    position: relative;
+    background-color: var(--main-color-2);;
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--main-color-3);
+}
+
+@media (min-width: 60em) {
+    .team_info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.emblem {
+    width: 10em;
+    height: 10em;
+}
+
+.summary_info {
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary_info li {
+    text-align: center;
+}
+
+.summary_info li + li {
+    margin-top: 0.5em;
+}
+
+.summary_info a {
+    color: dimgray;
+    text-decoration: none;
+}
+
+.summary_info a:hover {
+    color: dodgerblue;
+}
+
+.squad_block {
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.squad_table_container {
+    max-height: 15em;
+    overflow: auto;
+    margin-top: 1em;
+    border-radius: var(--border-radius);
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    z-index: 3;
+    background: white;
+}
+
+.squad_table_container::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.squad_table_container::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: var(--border-radius);
+}
+
+.squad_table_container:hover::-webkit-scrollbar-thumb {
+    background-color: dimgray;
+}
+
+.squad_table_container::-webkit-scrollbar-corner {
+    border-radius: var(--border-radius);
+}
+
+.squad_table {
+    background-color: whitesmoke;
+    padding: 0.5em;
+}
+
+.squad_table td {
+    padding: 5px 0;
+    border-bottom: 1px dashed dimgray;
+}
+
+.show_squad_button {
+    padding: 0.5em 1em;
+    color: white;
+    background-color: var(--main-color-3);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    width: 120px;
+    text-align: center;
+}
+
+@media (min-width: 60em) {
+    .show_squad_button {
+        align-self: flex-end;
+    }
+}

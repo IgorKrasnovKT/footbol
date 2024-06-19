@@ -1,0 +1,10 @@
+.matches_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.matches_container > * + * {
+    margin-top: 1em;
+}

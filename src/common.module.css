@@ -1,0 +1,118 @@
+@import './variables.css';
+
+/* Стили, используемые несколькими компонентами одновременно */
+
+.competition_title {
+    padding: 0.2em 0;
+    font-family: var(--header-font-family);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.find_button {
+    width: 2em;
+    height: 1em;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.find_button:hover {
+    background-color: lightgray;
+    transition: all .1s;
+}
+
+.find_button:active {
+    transform: scale(0.9);
+    transition: all 150ms;
+}
+
+@media (min-width: 48em) {
+    .find_button {
+        width: 1em;
+        height: 1em;
+        padding: 13px;
+    }
+}
+
+.text_input {
+    border: none;
+    outline: lightgray;
+    padding: 0 1.5em;
+    border-radius: var(--border-radius);
+    height: 28px;
+}
+
+.search_block {
+    display: flex;
+    column-gap: .5rem;
+    flex-wrap: nowrap;
+    
+    & > *:first-child {
+        flex: 1;
+    }
+}
+
+.selector {
+    border: none;
+    outline: lightgray;
+    padding: 0 1em;
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+@media (min-width: 48em) {
+    .text_input {
+        height: 44px;
+        font-size: 1.2em;
+    }
+
+    .selector {
+        font-size: 1.2em;
+    }
+}
+
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    select {
+        height: 28px;
+    }
+}
+
+.filters > * + * {
+    margin-top: 0.5em;
+    margin-left: 0;
+}
+
+/* Кнопку поиска в мобильной версии перемещаем к правому краю экрана */
+
+.filters img {
+    align-self: flex-end;
+}
+
+@media (min-width: 48em) {
+    .filters select {
+            height: 44px;
+    }
+}
+
+@media (min-width: 68em) {
+    .filters {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filters > * + * {
+        margin-top: 0;
+        margin-left: 0.5em;
+    }
+}

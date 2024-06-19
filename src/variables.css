@@ -1,0 +1,10 @@
+:root {
+    --header-font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+    --border-radius: 5px;
+    --body-back-color: rgb(235, 235, 235);
+    --main-font-family: 'Segoe UI', 'Noto Sans', sans-serif;
+    --main-color-1: #66B539;
+    --main-color-2: #EBF7DD;
+    --main-color-3: #151B1F;
+    --main-color-4: #374148;
+}

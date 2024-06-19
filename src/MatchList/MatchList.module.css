@@ -1,0 +1,63 @@
+@import '../variables.css';
+
+.match_counter {
+    text-align: center;
+    color: gray;
+    margin-top: 0.5em;
+}
+
+.match_table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--main-color-2);
+}
+
+.match_table_container {
+    flex: 1;
+    overflow: auto;
+    min-height: 600px;
+
+    tr:first-child {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.match_table th {
+    background-color: var(--main-color-3);
+    color: white;
+    font-weight: bold;
+}
+
+.match_table td, .match_table th {
+    padding: 0.5em 1em;
+}
+
+.match_table tr + tr {
+    border-bottom: 1px dashed dimgray;
+}
+
+.match_table td:nth-child(1), .match_table td:nth-child(2), .match_table td:nth-child(3), .match_table td:nth-child(6) {
+    text-align: center;
+}
+
+.match_table a {
+    text-decoration: none;
+    font-weight: bold;
+    color: dimgray;
+}
+
+.match_table a:hover {
+    color: dodgerblue;
+}
+
+@media (max-width: 48em) {
+    .match_table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .match_table td, .match_table th {
+        text-align: center;
+    }
+}
