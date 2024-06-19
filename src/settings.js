@@ -1,4 +1,4 @@
-export const API_TOKEN = '0b2a882879704512b9d366f8cbf4f8ed';
+export const API_TOKEN = 'db64a2e11aa4421c97dc56162c08341a';
 
 // Количество элементов списков, отображаемое при первоначальном рендеринге списка (например, списка матчей)
 export const DEFAULT_SHOW_COUNT = 30;
